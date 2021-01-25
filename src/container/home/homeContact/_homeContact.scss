@@ -1,0 +1,99 @@
+.homeContact{
+    grid-row: 9 / 10;
+    grid-column: full-start / full-end;
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-column-gap: 4rem;
+        @include respond(tab-port){
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2,min-content);
+        }
+    }
+    &__subHeader{
+        color: $color-primary2;
+        margin: 2rem 0rem;
+        @include respond(tab-port){
+            font-size: 4rem;
+        }
+        @include respond(phone){
+            font-size: 3rem;
+        }
+    }
+    &__inputs{
+        display: grid;
+        grid-template-rows: repeat(5, min-content);
+        grid-row-gap: .5rem;
+        width: 70%;
+        @include respond(tab-port){
+            width: 100%;
+        }
+    }
+    &__input{
+        padding: 1rem;
+        color: black;
+        @include respond(tab-port){
+            padding: 3rem;
+        }
+        @include respond(phone){
+            padding: 2rem;
+        }
+    }
+    &__inputt{
+        padding: 3rem 1rem;
+        @include respond(tab-port){
+            padding: 5rem 2rem;
+        }
+        @include respond(phone){
+            padding: 4rem 1rem;
+        }
+    }
+    &__input, &__inputt{
+        border: 1px solid grey;
+        &:focus{
+            outline: none;
+        }
+        &:hover,&:focus{
+            background-color: rgba(black, .1);
+        }
+        @include respond(tab-port){
+            font-size: 3rem;
+        }
+    }
+    &__button{
+        justify-self: flex-end;
+        background-color: $color-bg2;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: .4rem 1.5rem; 
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        cursor: pointer;
+
+        @include respond(tab-port){
+            font-size: 4rem;
+            padding: 1rem 2rem; 
+        }
+        @include respond(phone){
+            font-size: 3rem;
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+    &__paragraph{
+        color: rgb(124, 121, 121);
+        line-height: 2.5rem;
+        @include respond(tab-port){
+            font-size: 3.5rem;
+            line-height: 5rem;
+        }
+        @include respond(phone){
+            font-size: 2.5rem;
+            line-height: 4rem;
+        }
+    }
+}

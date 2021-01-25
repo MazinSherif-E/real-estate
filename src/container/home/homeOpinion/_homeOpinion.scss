@@ -1,0 +1,63 @@
+.opinion{ 
+    grid-row: 8 / 9;
+    grid-column: full-start / full-end;
+
+    background-image: linear-gradient(  
+            to right bottom,  
+            rgba(black  ,0.5) , 
+            rgba(black, 0.5) ) , 
+            url(./clients.jpg) ;
+    background-size: cover;
+    height: 100%;
+
+    &__header{
+        font-size: 3.5rem;
+        color: #fff;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        margin: 7rem 0;
+        @include respond(tab-port){
+            font-size: 5rem;
+        }
+        @include respond(phone){
+            font-size: 4rem;
+        }
+    }
+    &__icon{
+        color: $color-gold;
+        font-size: 3rem;
+        @include respond(tab-port){
+            font-size: 6rem;
+        }
+        @include respond(phone){
+            font-size: 5rem;
+        }
+    }
+    &__group{
+        display: grid;
+        grid-template-rows: repeat(3, min-content);
+        grid-row-gap: 3rem;
+        align-items: center;
+        justify-items: center;
+    }
+    &__text1, &__text{
+        text-align: center;
+        margin: 1rem 0;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        @include respond(tab-port){
+            font-size: 4rem;
+        }
+        @include respond(phone){
+            font-size: 3.5rem;
+        }
+    }
+    &__text1{
+        color: #fff;
+    }
+    &__text{
+        color: $color-gold;
+    }
+}

@@ -1,0 +1,13 @@
+.home{
+    display: grid;
+    grid-template-rows: 10rem 45vh 65vh 15vh repeat(5, min-content) 1fr;
+    grid-template-columns: [full-start] 1fr repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) 1fr [full-end];
+    font-size: 1.5rem;
+    
+    @include respond(tab-port){
+        grid-template-rows: 15rem 80vw min-content repeat(5, min-content) 1fr;
+    }
+    @include respond(phone){
+        grid-template-rows: 15rem 90vw min-content repeat(5, min-content) 1fr;
+    }
+}
